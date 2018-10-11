@@ -1,0 +1,7 @@
+#!/system/bin/sh
+#
+# Print startup info
+#
+L="log -p i -t descending"
+
+$L "Nannanana, SPIDERPIG! `getprop ro.build.version.release` / Spiderpig `getprop ro.extended.version`";

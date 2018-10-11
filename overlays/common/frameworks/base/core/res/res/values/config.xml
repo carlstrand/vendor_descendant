@@ -98,7 +98,7 @@
     <bool name="config_setColorTransformAccelerated">true</bool>
 
     <!--  Whether Multiuser UI should be shown -->
-    <bool name="config_enableMultiUserUI">true</bool>
+    <bool name="config_enableMultiUserUI">false</bool>
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
@@ -138,9 +138,9 @@
     <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
 
     <!-- Fonts -->
-    <string name="config_headlineFontFamily">google-sans</string>
-    <string name="config_headlineFontFamilyLight">google-sans</string>
+    <string name="config_headlineFontFamily">SourceSansPro</string>
+    <string name="config_headlineFontFamilyLight">SourceSansPro</string>
     <string name="config_headlineFontFeatureSettings">ss03</string>
-    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
+    <string name="config_headlineFontFamilyMedium">SourceSansPro-semibold</string>
  
 </resources>

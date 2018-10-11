@@ -16,19 +16,21 @@
 
 #APKs
 PRODUCT_PACKAGES += \
-	BraveBrowser \
+	CalculatorPre \
 	Markup \
+	OpenCamera \
 	RetroMusicPlayer \
 	SoundPickerPrebuilt \
-	CalculatorPre \
-	OpenCamera \
-	AnExplorer \
-	WallpaperPickerPre
+	WallpaperPickerPre \
+	SysLog \
+	LiveBoot \
+	Fleksy \
+	EvolveSMS
 
 
 #APKs libs
 PRODUCT_COPY_FILES += \
-	vendor/descendant/prebuilt/libs/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+		vendor/descendant/prebuilt/libs/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
         vendor/descendant/prebuilt/libs/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
 #Bootanimation
@@ -37,10 +39,55 @@ PRODUCT_COPY_FILES += \
 
 #Confs
 PRODUCT_COPY_FILES += \
-	vendor/descendant/prebuilt/configs/pixel.xml:system/etc/sysconfig/pixel.xml
+	vendor/descendant/prebuilt/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
 
-# Turbo
+# World APN list
+PRODUCT_COPY_FILES += \
+    vendor/descendant/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+# Resolv
+PRODUCT_COPY_FILES += \
+    vendor/descendant/prebuilt/etc/resolv.conf:system/etc/resolv.conf
+
+# init.d support
+PRODUCT_COPY_FILES += \
+    vendor/descendant/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner
+
+# Copy over added mimetype supported in libcore.net.MimeUtils
+PRODUCT_COPY_FILES += \
+    vendor/descendant/prebuilt/etc/content-types.properties:system/lib/content-types.properties
+
+# NFC:
+#   Provide default libnfc-nci.conf file for devices that does not have one in
+#   vendor/etc
+PRODUCT_COPY_FILES += \
+	vendor/descendant/prebuilt/phh/libnfc-nci.conf:system/phh/libnfc-nci-oreo.conf
+
+# LineageOS build may need this to make NFC work
 PRODUCT_PACKAGES += \
-        Turbo \
-        turbo.xml \
-        privapp-permissions-turbo.xml
+        NfcNci  
+
+#Fingerprint
+PRODUCT_COPY_FILES += \
+	vendor/descendant/prebuilt/phh/huawei-fingerprint.kl:system/phh/huawei/fingerprint.kl
+
+
+#Fonts
+PRODUCT_COPY_FILES += \
+    vendor/descendant/fonts/SSP/SourceSansPro-Regular.ttf:system/fonts/SourceSansPro-Regular.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-Italic.ttf:system/fonts/SourceSansPro-Italic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-Light.ttf:system/fonts/SourceSansPro-Light.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-LightItalic.ttf:system/fonts/SourceSansPro-LightItalic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-SemiBold.ttf:system/fonts/SourceSansPro-SemiBold.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-SemiBoldItalic.ttf:system/fonts/SourceSansPro-SemiBoldItalic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-ExtraLight.ttf:system/fonts/SourceSansPro-ExtraLight.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-ExtraLightItalic.ttf:system/fonts/SourceSansPro-ExtraLightItalic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-Bold.ttf:system/fonts/SourceSansPro-Bold.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-BoldItalic.ttf:system/fonts/SourceSansPro-BoldItalic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-Black.ttf:system/fonts/SourceSansPro-Black.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-BlackItalic.ttf:system/fonts/SourceSansPro-BlackItalic.ttf
+
+
+    #Sounds
+
+    #Wallpapers
