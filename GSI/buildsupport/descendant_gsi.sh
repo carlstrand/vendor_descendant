@@ -8,6 +8,7 @@ buildVariant() {
 	lunch $1
 	make WITHOUT_CHECK_API=true BUILD_NUMBER=$rom_fp installclean
 	make WITHOUT_CHECK_API=true BUILD_NUMBER=$rom_fp -j$jobs systemimage
+	make WITHOUT_CHECK_API=true BUILD_NUMBER=$rom_fp vndk-test-sepolicy
 }
 
 if [[ $1 == "--no-sync" ]];then
