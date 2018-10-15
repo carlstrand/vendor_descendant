@@ -72,20 +72,20 @@ PRODUCT_COPY_FILES += \
 	vendor/descendant/prebuilt/phh/huawei-fingerprint.kl:system/phh/huawei/fingerprint.kl
 
 
-#Fonts
-# PRODUCT_COPY_FILES += \
-#     vendor/descendant/fonts/SSP/SourceSansPro-Regular.ttf:system/fonts/SourceSansPro-Regular.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-Italic.ttf:system/fonts/SourceSansPro-Italic.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-Light.ttf:system/fonts/SourceSansPro-Light.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-LightItalic.ttf:system/fonts/SourceSansPro-LightItalic.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-SemiBold.ttf:system/fonts/SourceSansPro-SemiBold.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-SemiBoldItalic.ttf:system/fonts/SourceSansPro-SemiBoldItalic.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-ExtraLight.ttf:system/fonts/SourceSansPro-ExtraLight.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-ExtraLightItalic.ttf:system/fonts/SourceSansPro-ExtraLightItalic.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-Bold.ttf:system/fonts/SourceSansPro-Bold.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-BoldItalic.ttf:system/fonts/SourceSansPro-BoldItalic.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-Black.ttf:system/fonts/SourceSansPro-Black.ttf \
-#     vendor/descendant/fonts/SSP/SourceSansPro-BlackItalic.ttf:system/fonts/SourceSansPro-BlackItalic.ttf
+Fonts
+PRODUCT_COPY_FILES += \
+    vendor/descendant/fonts/SSP/SourceSansPro-Regular.ttf:system/fonts/SourceSansPro-Regular.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-Italic.ttf:system/fonts/SourceSansPro-Italic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-Light.ttf:system/fonts/SourceSansPro-Light.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-LightItalic.ttf:system/fonts/SourceSansPro-LightItalic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-SemiBold.ttf:system/fonts/SourceSansPro-SemiBold.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-SemiBoldItalic.ttf:system/fonts/SourceSansPro-SemiBoldItalic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-ExtraLight.ttf:system/fonts/SourceSansPro-ExtraLight.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-ExtraLightItalic.ttf:system/fonts/SourceSansPro-ExtraLightItalic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-Bold.ttf:system/fonts/SourceSansPro-Bold.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-BoldItalic.ttf:system/fonts/SourceSansPro-BoldItalic.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-Black.ttf:system/fonts/SourceSansPro-Black.ttf \
+    vendor/descendant/fonts/SSP/SourceSansPro-BlackItalic.ttf:system/fonts/SourceSansPro-BlackItalic.ttf
 
 
 

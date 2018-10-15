@@ -31,6 +31,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/descendant/overlays/common
 
+PRODUCT_PACKAGES += \
+	SettingsBlackTheme \
+	SystemBlackTheme \
+	SystemDarkTheme \
+	DefaultQS \
+	SquareQS \
+	SuperBubbleQS \
+	TeardropQS \
+	ZenQS
+
 #Prebuilts
 include vendor/descendant/prebuilt/pre.mk
 
