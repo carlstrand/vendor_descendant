@@ -72,7 +72,7 @@ PRODUCT_COPY_FILES += \
 	vendor/descendant/prebuilt/phh/huawei-fingerprint.kl:system/phh/huawei/fingerprint.kl
 
 
-Fonts
+#Fonts
 PRODUCT_COPY_FILES += \
     vendor/descendant/fonts/SSP/SourceSansPro-Regular.ttf:system/fonts/SourceSansPro-Regular.ttf \
     vendor/descendant/fonts/SSP/SourceSansPro-Italic.ttf:system/fonts/SourceSansPro-Italic.ttf \
