@@ -14,7 +14,6 @@
 #
 
 #Device Codename
-
 DESCENDANT_DEVICE := $(subst descendant_,,$(TARGET_PRODUCT))
 
 #Versioning
@@ -24,7 +23,6 @@ MINOR_VER := Two
 DESCENDANT_NAME := $(MAJOR_VER)Dot$(MINOR_VER)
 
 #Custom Properties
-
 PRODUCT_PROPERTY_OVERRIDES += \
 	org.descendant.full_ver=$(DESCENDANT_NAME)
 
@@ -41,10 +39,6 @@ PRODUCT_PACKAGES += \
 	TeardropQS \
 	ZenQS
 
-#Prebuilts
-include vendor/descendant/prebuilt/pre.mk
-
-
 #Accents
 PRODUCT_PACKAGES += \
     WhiteAccent
@@ -52,3 +46,6 @@ PRODUCT_PACKAGES += \
 # whitelist packages for location providers not in system
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.services.whitelist.packagelist=com.google.android.gms
+
+
+$(call inherit-product, vendor/descendant/prebuilt/pre.mk)
