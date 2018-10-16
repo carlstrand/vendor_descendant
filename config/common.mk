@@ -13,6 +13,23 @@
 # limitations under the License.
 #
 
+
+# General additions
+PRODUCT_PROPERTY_OVERRIDES += \
+    keyguard.no_require_sim=true \
+    dalvik.vm.debug.alloc=0 \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    ro.error.receiver.system.apps=com.google.android.gms \
+    ro.setupwizard.enterprise_mode=1 \
+    ro.com.android.dataroaming=false \
+    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
+    ro.com.android.dateformat=yyyy-MM-dd \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0 \
+    ro.setupwizard.rotation_locked=true \
+    ro.build.selinux=1
+
 #Device Codename
 DESCENDANT_DEVICE := $(subst descendant_,,$(TARGET_PRODUCT))
 
