@@ -16,16 +16,19 @@
 
 #APKs
 PRODUCT_PACKAGES += \
-	CalculatorPre \
-	Markup \
 	OpenCamera \
 	RetroMusicPlayer \
 	SoundPickerPrebuilt \
-	WallpaperPickerPre \
 	SysLog \
 	LiveBoot \
 	Fleksy \
-	EvolveSMS
+	EvolveSMS \
+    NovaLauncher \
+    BetterBatteryStats \
+    MagiskManager \
+    Substratum \
+    SolidExplorer \
+    TrebleApp
 
 
 #APKs libs
