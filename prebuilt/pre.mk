@@ -64,7 +64,7 @@ PRODUCT_COPY_FILES += \
 #   Provide default libnfc-nci.conf file for devices that does not have one in
 #   vendor/etc
 PRODUCT_COPY_FILES += \
-	vendor/descendant/prebuilt/phh/libnfc-nci.conf:system/phh/libnfc-nci-oreo.conf
+	vendor/descendant/prebuilt/phh/libnfc-nci.conf:system/phh/libnfc-nci.conf
 
 # LineageOS build may need this to make NFC work
 PRODUCT_PACKAGES += \
