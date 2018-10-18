@@ -255,6 +255,13 @@
     </integer-array>
 
 
+<!---/sys/class/hw_power/charger/direct_charger/iin_thermal??-->
+
+    <string-array name="config_oemFastChargerStatusPaths" translatable="false">
+        <item>/sys/class/power_supply/Battery/fcp_status</item>
+        <item>/sys/class/power_supply/Battery/scp_status</item>
+    </string-array>
+
          <!-- Enable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">true</bool>
 

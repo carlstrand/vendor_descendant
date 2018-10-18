@@ -19,18 +19,21 @@ PRODUCT_PACKAGES += \
 	OpenCamera \
 	RetroMusicPlayer \
 	SoundPickerPrebuilt \
-	SysLog \
-	LiveBoot \
+	Hyperion \
 	Fleksy \
 	EvolveSMS \
-    NovaLauncher \
-    BetterBatteryStats \
     MagiskManager \
     Substratum \
     SolidExplorer \
     TrebleApp
 
 
+# Turbo
+PRODUCT_PACKAGES += \
+        Turbo \
+        turbo.xml \
+        privapp-permissions-turbo.xml
+        
 #APKs libs
 PRODUCT_COPY_FILES += \
 		vendor/descendant/prebuilt/libs/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
