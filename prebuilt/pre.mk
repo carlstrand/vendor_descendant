@@ -14,30 +14,27 @@
 # limitations under the License.
 #
 
-#APKs
-PRODUCT_PACKAGES += \
-	OpenCamera \
-	RetroMusicPlayer \
-	SoundPickerPrebuilt \
-	Hyperion \
-	Fleksy \
-	EvolveSMS \
-    MagiskManager \
-    Substratum \
-    SolidExplorer \
-    TrebleApp
 
 
-# Turbo
-PRODUCT_PACKAGES += \
-        Turbo \
-        turbo.xml \
-        privapp-permissions-turbo.xml
-        
+
+
 #APKs libs
 PRODUCT_COPY_FILES += \
 		vendor/descendant/prebuilt/libs/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
-        vendor/descendant/prebuilt/libs/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+        vendor/descendant/prebuilt/libs/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so \
+        vendor/descendant/prebuilt/libs/lib/libfyusenet.so:system/lib/libfyusenet.so \
+        vendor/descendant/prebuilt/libs/lib/libHW_Pano_f.so:system/lib/libHW_Pano_f.so \
+        vendor/descendant/prebuilt/libs/lib/libHwPostCamera_jni.so:system/lib/libHwPostCamera_jni.so \
+        vendor/descendant/prebuilt/libs/lib/libIvw35.so:system/lib/libIvw35.so \
+        vendor/descendant/prebuilt/libs/lib/libjni_front_panorama_camera2.so:system/lib/libjni_front_panorama_camera2.so \
+        vendor/descendant/prebuilt/libs/lib/libjni_mrc_cg_filters_camera2.so:system/lib/libjni_mrc_cg_filters_camera2.so \
+        vendor/descendant/prebuilt/libs/lib/libJniVoiceCapture.so:system/lib/libJniVoiceCapture.so \
+        vendor/descendant/prebuilt/libs/lib/libmorpho_memory_allocator.so:system/lib/libmorpho_memory_allocator.so \
+        vendor/descendant/prebuilt/libs/lib/libmorpho_panorama_gp.so:system/lib/libmorpho_panorama_gp.so \
+        vendor/descendant/prebuilt/libs/lib/libscanner.so:system/lib/libscanner.so \
+        vendor/descendant/prebuilt/libs/lib/libTargetTracking.so:system/lib/libTargetTracking.so \
+        vendor/descendant/prebuilt/libs/lib/libtrack.so:system/lib/libtrack.so \
+        vendor/descendant/prebuilt/libs/lib/libui-27.so:system/lib/libui-27.so
 
 #Bootanimation
 PRODUCT_COPY_FILES += \
@@ -49,33 +46,14 @@ PRODUCT_COPY_FILES += \
 
 # World APN list
 PRODUCT_COPY_FILES += \
-    vendor/descendant/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
-
-# Resolv
-PRODUCT_COPY_FILES += \
-    vendor/descendant/prebuilt/etc/resolv.conf:system/etc/resolv.conf
+    vendor/descendant/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    vendor/descendant/prebuilt/etc/resolv.conf:system/etc/resolv.conf \
+    vendor/descendant/prebuilt/etc/content-types.properties:system/lib/content-types.properties
 
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/descendant/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner
 
-# Copy over added mimetype supported in libcore.net.MimeUtils
-PRODUCT_COPY_FILES += \
-    vendor/descendant/prebuilt/etc/content-types.properties:system/lib/content-types.properties
-
-# NFC:
-#   Provide default libnfc-nci.conf file for devices that does not have one in
-#   vendor/etc
-PRODUCT_COPY_FILES += \
-	vendor/descendant/prebuilt/phh/libnfc-nci.conf:system/phh/libnfc-nci.conf
-
-# LineageOS build may need this to make NFC work
-PRODUCT_PACKAGES += \
-        NfcNci  
-
-#Fingerprint
-PRODUCT_COPY_FILES += \
-	vendor/descendant/prebuilt/phh/huawei-fingerprint.kl:system/phh/huawei/fingerprint.kl
 
 
 #Fonts
@@ -104,6 +82,38 @@ PRODUCT_COPY_FILES += \
     vendor/descendant/fonts/GoogleSans/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
     vendor/descendant/fonts/GoogleSans/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
 
-    #Sounds
 
-    #Wallpapers
+
+# Huawei Camera
+# PRODUCT_COPY_FILES += \
+#     vendor/descendant/prebuilt/apps/HwCamera2/lib/android.hidl.base@1.0.so:system/lib/android.hid$
+#     vendor/descendant/prebuilt/apps/HwCamera2/lib64/android.hidl.base@1.0.so:system/lib64/android$
+#     vendor/descendant/prebuilt/apps/HwCamera2/lib64/libHwPostCamera_jni.so:system/lib64/libHwPost$
+
+
+PRODUCT_COPY_FILES += \
+	vendor/descendant/prebuilt/fingerprint/hw-fingerprint.rc:system/etc/init/hw-fingerprint.rc \
+	vendor/descendant/prebuilt/fingerprint/hw-fpnav:system/bin/hw-fpnav \
+	vendor/descendant/prebuilt/fingerprint/hw-fpnav.dex:system/phh/hw-fpnav.dex \
+	vendor/descendant/prebuilt/fingerprint/fingerprint.kl:system/phh/huawei/fingerprint.kl
+
+    
+
+
+#APKs
+PRODUCT_PACKAGES += \
+	EvolveSMS \
+	Fleksy \
+	Hyperion \
+	OpenCamera \
+	SoundPickerPrebuilt \
+    MagiskManager \
+    SolidExplorer \
+    Substratum
+
+PRODUCT_PACKAGES += \
+    NfcNci  
+
+PRODUCT_PACKAGES += \
+    HwCamera2
+	hw-fpnav-daemon

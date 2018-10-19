@@ -24,11 +24,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
+    ro.services.whitelist.packagelist=com.google.android.gms \
     ro.com.android.dateformat=yyyy-MM-dd \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
     ro.setupwizard.rotation_locked=true \
-    ro.build.selinux=1
+    ro.build.selinux=1 \
+    dalvik.vm.image-dex2oat-filter=verify-none \
+    ro.product.locale=sv-SE \
+    ro.config.bt_sco_vol_steps=25 \
+    ro.config.media_vol_steps=25 \
+    ro.config.vc_call_vol_steps=25 \
+    ro.config.vol_steps=25
 
 #Device Codename
 DESCENDANT_DEVICE := $(subst descendant_,,$(TARGET_PRODUCT))
@@ -60,9 +67,34 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     WhiteAccent
 
-# whitelist packages for location providers not in system
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.services.whitelist.packagelist=com.google.android.gms
-
 
 $(call inherit-product, vendor/descendant/prebuilt/pre.mk)
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+
+
+GAPPS_VARIANT := pico
+
+DONT_DEXPREOPT_PREBUILTS := true
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_FORCE_BROWSER_OVERRIDES := true
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+
+GAPPS_PRODUCT_PACKAGES += \
+       CalculatorGoogle \
+       Chrome \
+       FaceLock \
+       GoogleHome \
+       GoogleTTS \
+       Maps \
+       MarkupGoogle \
+       Photos \
+       PrebuiltDeskClockGoogle \
+       Turbo  \
+       GoogleAssistant \
+       ActionsServices
+       
+
+GAPPS_EXCLUDED_PACKAGES := GooglePackageInstaller
+
