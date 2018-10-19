@@ -115,5 +115,5 @@ PRODUCT_PACKAGES += \
     NfcNci  
 
 PRODUCT_PACKAGES += \
-    HwCamera2
+    HwCamera2 \
 	hw-fpnav-daemon
