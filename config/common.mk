@@ -32,10 +32,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     dalvik.vm.image-dex2oat-filter=verify-none \
     ro.product.locale=sv-SE \
-    ro.config.bt_sco_vol_steps=25 \
-    ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=25 \
-    ro.config.vol_steps=25
+    config.disable_consumerir=true \
+
+
 
 #Device Codename
 DESCENDANT_DEVICE := $(subst descendant_,,$(TARGET_PRODUCT))
@@ -85,7 +84,6 @@ GAPPS_PRODUCT_PACKAGES += \
        CalculatorGoogle \
        Chrome \
        FaceLock \
-       GoogleHome \
        GoogleTTS \
        Maps \
        MarkupGoogle \
