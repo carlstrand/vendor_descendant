@@ -1,4 +1,7 @@
 #!/bin/bash
+gn gen --args="target_os=\"android\" target_cpu=\"arm64\" is_debug=false is_official_build=true is_component_build=false symbol_level=0 enable_resource_whitelist_generation=false ffmpeg_branding=\"Chrome\" proprietary_codecs=true android_channel=\"stable\" android_default_version_name=71.0.3578.17" out/Default
+
+time ninja -C out/Default monochrome_public_apk
 # Meant to run on a fresh Ubuntu 16.04
 # Taken from KoffeinFlummi
 
@@ -40,6 +43,9 @@ git am ../chromium_patches/*.patch
 ./build/linux/sysroot_scripts/install-sysroot.py --arch=i386
 ./build/linux/sysroot_scripts/install-sysroot.py --arch=amd64
 
-gn gen --args="target_os=\"android\" target_cpu=\"arm64\" is_debug=false is_official_build=true is_component_build=false symbol_level=0 enable_resource_whitelist_generation=false ffmpeg_branding=\"Chrome\" proprietary_codecs=true android_channel=\"stable\" android_default_version_name=\"$VERSION\"" out/Default
+gn gen --args="target_os=\"android\" target_cpu=\"arm64\" is_debug=false is_official_build=true is_component_build=false symbol_level=0 enable_resource_whitelist_generation=false ffmpeg_branding=\"Chrome\" proprietary_codecs=true android_channel=\"stable\" android_default_version_name="71.0.3578.17"" out/Default
+gn gen --args="target_os=\"android\" target_cpu=\"arm64\" is_debug=false is_official_build=true is_component_build=false symbol_level=0 enable_resource_whitelist_generation=false ffmpeg_branding=\"Chrome\" proprietary_codecs=true android_channel=\"stable\" android_default_version_name=\"71.0.3578.17\"" out/Default
 
 time ninja -C out/Default monochrome_public_apk
+
+zcat /root/chromium/out/Default/MonochromePublic.apk.gz > /home/mathias/dev/external/chromium/prebuilt/arm64/MonochromePublic.apk
