@@ -90,16 +90,7 @@ PRODUCT_COPY_FILES += \
 #     vendor/descendant/prebuilt/apps/HwCamera2/lib64/android.hidl.base@1.0.so:system/lib64/android$
 #     vendor/descendant/prebuilt/apps/HwCamera2/lib64/libHwPostCamera_jni.so:system/lib64/libHwPost$
 
-
-PRODUCT_COPY_FILES += \
-	vendor/descendant/prebuilt/fingerprint/hw-fingerprint.rc:system/etc/init/hw-fingerprint.rc \
-	vendor/descendant/prebuilt/fingerprint/hw-fpnav:system/bin/hw-fpnav \
-	vendor/descendant/prebuilt/fingerprint/hw-fpnav.dex:system/phh/hw-fpnav.dex \
-	vendor/descendant/prebuilt/fingerprint/fingerprint.kl:system/phh/huawei/fingerprint.kl
-
     
-
-
 #APKs
 PRODUCT_PACKAGES += \
 	EvolveSMS \
@@ -111,8 +102,6 @@ PRODUCT_PACKAGES += \
     SolidExplorer \
     Substratum
 
-PRODUCT_PACKAGES += \
-    NfcNci  
 
 PRODUCT_PACKAGES += \
     HwCamera2 \
