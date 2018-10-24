@@ -19,22 +19,22 @@
 
 
 #APKs libs
-PRODUCT_COPY_FILES += \
-		vendor/descendant/prebuilt/libs/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
-        vendor/descendant/prebuilt/libs/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so \
-        vendor/descendant/prebuilt/libs/lib/libfyusenet.so:system/lib/libfyusenet.so \
-        vendor/descendant/prebuilt/libs/lib/libHW_Pano_f.so:system/lib/libHW_Pano_f.so \
-        vendor/descendant/prebuilt/libs/lib/libHwPostCamera_jni.so:system/lib/libHwPostCamera_jni.so \
-        vendor/descendant/prebuilt/libs/lib/libIvw35.so:system/lib/libIvw35.so \
-        vendor/descendant/prebuilt/libs/lib/libjni_front_panorama_camera2.so:system/lib/libjni_front_panorama_camera2.so \
-        vendor/descendant/prebuilt/libs/lib/libjni_mrc_cg_filters_camera2.so:system/lib/libjni_mrc_cg_filters_camera2.so \
-        vendor/descendant/prebuilt/libs/lib/libJniVoiceCapture.so:system/lib/libJniVoiceCapture.so \
-        vendor/descendant/prebuilt/libs/lib/libmorpho_memory_allocator.so:system/lib/libmorpho_memory_allocator.so \
-        vendor/descendant/prebuilt/libs/lib/libmorpho_panorama_gp.so:system/lib/libmorpho_panorama_gp.so \
-        vendor/descendant/prebuilt/libs/lib/libscanner.so:system/lib/libscanner.so \
-        vendor/descendant/prebuilt/libs/lib/libTargetTracking.so:system/lib/libTargetTracking.so \
-        vendor/descendant/prebuilt/libs/lib/libtrack.so:system/lib/libtrack.so \
-        vendor/descendant/prebuilt/libs/lib/libui-27.so:system/lib/libui-27.so
+# PRODUCT_COPY_FILES += \
+# 		vendor/descendant/prebuilt/libs/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+#         vendor/descendant/prebuilt/libs/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so \
+#         vendor/descendant/prebuilt/libs/lib/libfyusenet.so:system/lib/libfyusenet.so \
+#         vendor/descendant/prebuilt/libs/lib/libHW_Pano_f.so:system/lib/libHW_Pano_f.so \
+#         vendor/descendant/prebuilt/libs/lib/libHwPostCamera_jni.so:system/lib/libHwPostCamera_jni.so \
+#         vendor/descendant/prebuilt/libs/lib/libIvw35.so:system/lib/libIvw35.so \
+#         vendor/descendant/prebuilt/libs/lib/libjni_front_panorama_camera2.so:system/lib/libjni_front_panorama_camera2.so \
+#         vendor/descendant/prebuilt/libs/lib/libjni_mrc_cg_filters_camera2.so:system/lib/libjni_mrc_cg_filters_camera2.so \
+#         vendor/descendant/prebuilt/libs/lib/libJniVoiceCapture.so:system/lib/libJniVoiceCapture.so \
+#         vendor/descendant/prebuilt/libs/lib/libmorpho_memory_allocator.so:system/lib/libmorpho_memory_allocator.so \
+#         vendor/descendant/prebuilt/libs/lib/libmorpho_panorama_gp.so:system/lib/libmorpho_panorama_gp.so \
+#         vendor/descendant/prebuilt/libs/lib/libscanner.so:system/lib/libscanner.so \
+#         vendor/descendant/prebuilt/libs/lib/libTargetTracking.so:system/lib/libTargetTracking.so \
+#         vendor/descendant/prebuilt/libs/lib/libtrack.so:system/lib/libtrack.so \
+#         vendor/descendant/prebuilt/libs/lib/libui-27.so:system/lib/libui-27.so
 
 #Bootanimation
 PRODUCT_COPY_FILES += \
@@ -98,12 +98,11 @@ PRODUCT_PACKAGES += \
     EXKernelManager \
     NovaLauncher \
 	OpenCamera \
-	SoundPickerPrebuilt \
     MagiskManager \
     SolidExplorer \
     Substratum
 
 
-PRODUCT_PACKAGES += \
-    HwCamera2 \
-	hw-fpnav-daemon
+# PRODUCT_PACKAGES += \
+#     HwCamera2 \
+# 	hw-fpnav-daemon
