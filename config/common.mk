@@ -33,9 +33,7 @@ PRODUCT_PACKAGES += \
 	SettingsBlackTheme \
 	SystemBlackTheme \
 	SystemDarkTheme \
-	DefaultQS \
-	SquareQS \
-	SuperBubbleQS
+	DefaultQS
 
 #Accents
 PRODUCT_PACKAGES += \
@@ -65,9 +63,10 @@ GAPPS_PRODUCT_PACKAGES += \
        Photos \
        PrebuiltDeskClockGoogle \
        Turbo  \
-       GoogleAssistant \
-       ActionsServices
-       
+       DigitalWellbeing \
+       AndroidPlatformServices \
+       PrebuiltGmsCore \
+       GoogleBackupTransport
 
 GAPPS_EXCLUDED_PACKAGES := GooglePackageInstaller
 
