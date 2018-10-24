@@ -22,7 +22,5 @@
     <!-- The default WebView implementation -->
     <webviewprovider description="AOSP WebView" packageName="com.android.webview" availableByDefault="true" />
 
-    <!-- Brave Weview -->
-    <webviewprovider description="Brave Browser" packageName="com.brave.browser" availableByDefault="true" />
 
 </webviewproviders>

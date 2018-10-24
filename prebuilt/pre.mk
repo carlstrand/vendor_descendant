@@ -95,7 +95,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	EvolveSMS \
 	Fleksy \
-	Hyperion \
+    EXKernelManager \
+    NovaLauncher \
 	OpenCamera \
 	SoundPickerPrebuilt \
     MagiskManager \
