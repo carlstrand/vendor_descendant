@@ -102,7 +102,6 @@ PRODUCT_PACKAGES += \
     SolidExplorer \
     Substratum
 
-
 # PRODUCT_PACKAGES += \
 #     HwCamera2 \
 # 	hw-fpnav-daemon
